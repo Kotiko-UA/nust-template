@@ -1,12 +1,8 @@
 export type UserType = {
   id: string
-  firstName: string
-  lastName: string
+  name: string
   email: string
   active: boolean
-  company: string
-  phone: string
-  type: 'professional' | 'contractor' | ''
   role: {
     id: number
   }

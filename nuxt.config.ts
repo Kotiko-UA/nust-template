@@ -1,7 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+
+  devtools: { enabled: false },
   css: ['@/assets/styles/main.scss'],
   vite: {
     css: {
@@ -14,7 +16,22 @@ export default defineNuxtConfig({
         },
       },
     },
+
+    plugins: [
+      svgLoader({
+        svgo: false,
+      }),
+    ],
   },
+  modules: [
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+    'nuxt-toast',
+  ],
   fonts: {
     defaults: {
       weights: [300, 400, 500, 600, 700, 800],
@@ -29,23 +46,6 @@ export default defineNuxtConfig({
   },
   ssr: true,
   routeRules: {
-    '/admin/**': { ssr: false },
-    '/client/**': { ssr: false },
     '/auth/**': { ssr: false },
   },
-  modules: [
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/scripts',
-    '@pinia/nuxt',
-    'pinia-plugin-persistedstate/nuxt',
-    '@nuxt/eslint',
-    '@nuxtjs/tailwindcss',
-    'nuxt-toast',
-  ],
-  // nitro: {
-  //   routeRules: {
-  //     '/api/**': { proxy: 'https://api.kotiko.work/**' },
-  //   },
-  // }, // - для бекенду Railway
 })
