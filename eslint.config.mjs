@@ -1,6 +1,10 @@
-// @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
-
-export default withNuxt(
-  // Your custom configs here
-)
+module.exports = {
+	extends: [
+		'eslint:recommended',
+		'plugin:vue/vue3-recommended',
+		'plugin:prettier/recommended',
+	],
+	rules: {
+		quotes: ['error', 'single'],
+	},
+}
