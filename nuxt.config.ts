@@ -1,5 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
@@ -16,12 +14,6 @@ export default defineNuxtConfig({
         },
       },
     },
-
-    plugins: [
-      svgLoader({
-        svgo: false,
-      }),
-    ],
   },
   modules: [
     '@nuxt/fonts',
