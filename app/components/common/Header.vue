@@ -1,1 +1,4 @@
-<template><header>header</header></template>
+<script setup lang="ts"></script>
+<template>
+  <header><div>header</div></header>
+</template>
