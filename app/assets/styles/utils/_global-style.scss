@@ -1,0 +1,136 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+body {
+  font-family: 'Urbanist';
+  margin: 0;
+  line-height: 1.5;
+  min-height: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: #f8fbff;
+  color: var(--Dark);
+}
+
+section {
+  padding: 60px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include desktop {
+    padding: 120px 0;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include mobile {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 20px;
+  }
+
+  @include laptop {
+    max-width: 1280px;
+    padding: 0 15px;
+  }
+
+  @include desktop {
+    max-width: 1440px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+// hide/show
+
+.hide {
+  display: none !important;
+}
+.hide-block-mobile {
+  display: none;
+  @include laptop {
+    display: block;
+  }
+}
+.hide-flex-mobile {
+  display: none;
+  @include laptop {
+    display: flex;
+  }
+}
+.show-block-mobile {
+  display: block;
+  @include laptop {
+    display: none;
+  }
+}
+
+// section title + text
+.section-title {
+  color: var(--Dark);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 120%;
+  @include tablet {
+    font-size: 40px;
+  }
+  @include laptop {
+    font-size: 48px;
+  }
+  & > span {
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+.section-text {
+  color: var(--Dark);
+  font-size: 16px;
+  line-height: 140%;
+  & > span {
+    font-weight: 700;
+  }
+  @include tablet {
+    font-size: 18px;
+    line-height: 120%;
+  }
+  @include laptop {
+    font-size: 20px;
+  }
+}

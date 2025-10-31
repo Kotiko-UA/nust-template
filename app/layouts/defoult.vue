@@ -1,8 +1,8 @@
 <script type="module" lang="ts"></script>
 <template>
 	<div>
-		<header></header>
+		<CommonHeader />
 		<slot />
-		<footer></footer>
+		<CommonFooter />
 	</div>
 </template>

@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.skip-link {
+  display: none;
+}
+
+ul,
+ol {
+  padding-left: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl {
+  margin-block: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+}
+
+dd {
+  margin-left: 0;
+}
+
+fieldset {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+a {
+  display: block;
+  color: currentColor;
+  text-decoration: none;
+}
+
+@media (pointer: fine) {
+  button {
+    cursor: pointer;
+  }
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
