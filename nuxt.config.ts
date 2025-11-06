@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
   devtools: { enabled: false },
-  css: ['@/assets/styles/main.scss'],
+  css: ['@/assets/styles/main.css'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -10,6 +10,7 @@ export default defineNuxtConfig({
           additionalData: `
             @use "@/assets/styles/utils/_variables.scss" as *;
             @use "@/assets/styles/utils/_mixins.scss" as *;
+            @use "@/assets/styles/utils/_global-style.scss" as *;
           `,
         },
       },
